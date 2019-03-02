@@ -1,0 +1,32 @@
+{
+  "name": "ai-portfolio",
+  "version": "1.0.0",
+  "description": "AITech's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "build": "npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI-88/ai-portfolio.git"
+  },
+  "keywords": [],
+  "author": "AITech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AI-88/ai-portfolio/issues"
+  },
+  "homepage": "https://github.com/AI-88/ai-portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  }
+}
